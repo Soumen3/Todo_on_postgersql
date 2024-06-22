@@ -2,9 +2,9 @@ from django.db import models
 
 # Create your models here.
 class Todo(models.Model):
-	title = models.CharField(max_length=120)
-	description = models.TextField()
-	completed = models.BooleanField(default=False)
+
+	task = models.TextField()
+	completed = models.BooleanField(default=False, blank=True)
 	created = models.DateTimeField(auto_now_add=True)
 
 	def __str__(self):
